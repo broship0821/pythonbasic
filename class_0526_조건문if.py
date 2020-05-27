@@ -189,23 +189,23 @@
 #     print("요금은 %d원 입니다" % money)
 # elif 40 >= time > 30:
 #     plus_money = 5000
-#     money = 30000 + plus_money*1
+#     money = airplan + plus_money*1
 #     print("요금은 %d원 입니다" % money)
 # elif 50 >= time > 40:
 #     plus_money = 5000
-#     money = 30000 + plus_money*2
+#     money = airplan + plus_money*2
 #     print("요금은 %d원 입니다" % money)
 # elif 60 >= time > 50:
 #     plus_money = 5000
-#     money = 30000 + plus_money*3
+#     money = airplan + plus_money*3
 #     print("요금은 %d원 입니다" % money)
 # elif 70 >= time > 60:
 #     plus_money = 5000
-#     money = 30000 + plus_money*4
+#     money = airplan + plus_money*4
 #     print("요금은 %d원 입니다" % money)
 # elif 80 >= time > 70:
 #     plus_money = 5000
-#     money = 30000 + plus_money*5
+#     money = airplan + plus_money*5
 #     print("요금은 %d원 입니다" % money)
 
 #다른 방법
