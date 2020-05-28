@@ -185,13 +185,19 @@
 # for i in st:
 #     print(i, end=" ")
 
-a_sum=0
-st = "It is a fun Python class"
-#총개수, a개수, s개수를 구하시오
-for i in st:
-    print("총 개수")
-    s_sum = 
-    if i == "a":
-        print("a 개수")
-    if i == "s":
-        print("s 개수")
+
+# st = "It is a fun Python class"
+# #총개수, a개수, s개수를 구하시오
+# a = 0
+# s = 0
+# total = 0
+# for i in st:
+#     total += 1
+#     if i == "a":
+#         a += 1
+#     elif i == "s":
+#         s += 1
+# print("결과")
+# print("총 개수: %d" % total)
+# print("a 개수: %d" % a)
+# print("s 개수: %d" % s)
