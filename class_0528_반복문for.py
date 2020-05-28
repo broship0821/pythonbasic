@@ -32,10 +32,10 @@
 #     print("{:^5}".format("{}단".format(i)), end="\t")
 # print()
 # print("="*64)
-# for i in range(1, 10,):
-#     for j in range(2, 10):
-#         print("{}*{}={:<3}".format(j, i, i*j), end=" ")
-#     print()
+for i in range(1, 10,):
+    for j in range(2, 10):
+        print("{}*{}={:<3}".format(j, i, i*j), end=" ")
+    print()
 
 # #예시 실패작
 # for i in range(0, 5):
