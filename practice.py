@@ -6,9 +6,9 @@
 #     print()
 
 # #반복문for0528
-for i in range(1, 22, 5):
-    print(i, end="\t")
-    for j in range(1, 5):
-        print(i+j, end="\t")
-    print()
+# for i in range(1, 22, 5):
+#     print(i, end="\t")
+#     for j in range(1, 5):
+#         print(i+j, end="\t")
+#     print()
     
