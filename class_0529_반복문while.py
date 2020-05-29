@@ -113,38 +113,26 @@
 #         k += 1
 #     i+=1
 
-
+#####첫번째 시도######
 # 쌀 100통이 저장되어 있는 창고에 암수 1쌍의 쥐가 있다. 쥐 한마리가 하루에
 # 20g씩의 쌀을 먹고, 10일(10,20,30)마다 쥐의 수가 2배씩 증가한다. 며칠만에
 # 창고의 쌀이 모두 쥐의 먹이가 될까. 그리고 쥐는 총 몇마리 인가?
 # (쌀 한통 = 1kg, 쌀을 먹은 후 2배 증가하는 조건)
 # 총 10만그람 쌀
-
 rice = 100000
 eat_oneday = 20
 mouse = 2
 day = 1
 
-print("1번째", rice - (2 * eat_oneday) * 1)
-print("10번째", rice - (4 * eat_oneday) * 10)
-print("20번째", rice - (8 * eat_oneday) * 20)
-print("30번째", rice - (16 * eat_oneday) * 30)
-print("40번째", rice - (32 * eat_oneday) * 40)
-print("50번째", rice - (64 * eat_oneday) * 50)
-print("59번째", rice - (64 * eat_oneday) * 59)
-print("60번째", rice - (128 * eat_oneday) * 60)
-print()
-
-eat_sum = rice - (mouse * eat_oneday) * day
-while eat_sum >= 0:
-    if day % 10 == 0:
-        mouse = mouse * 2
-    eat_sum = rice - (mouse * eat_oneday) * day
-    day += 1
-print("{}번째날 남은 쌀: {:,}".format(day-1, eat_sum))
-print("%d번째 모두 쥐의 먹이가 됨" % (day-1))
-print("총 쥐 마리: %d" % mouse)
-
+# eat_sum = rice - (mouse * eat_oneday) * day
+# while eat_sum >= 0:
+#     if day % 10 == 0:
+#         mouse = mouse * 2
+#     eat_sum = rice - (mouse * eat_oneday) * day
+#     day += 1
+# print("{}번째날 남은 쌀: {:,}".format(day-1, eat_sum))
+# print("%d번째 모두 쥐의 먹이가 됨" % (day-1))
+# print("총 쥐 마리: %d" % mouse)
 
 # eat_sum = rice - (mouse * eat_oneday) * day
 # print("총 쌀: {:,}".format(eat_sum))
@@ -157,3 +145,74 @@ print("총 쥐 마리: %d" % mouse)
 # print("{}번째날 남은 쌀: {:,}".format(day, eat_sum))
 # print("%d번째 모두 쥐의 먹이가 됨" % day)
 # print("총 쥐 마리: %d" % mouse)
+
+
+#####두번째 시도######
+# 쌀 100통이 저장되어 있는 창고에 암수 1쌍의 쥐가 있다. 쥐 한마리가 하루에
+# 20g씩의 쌀을 먹고, 10일(10,20,30)마다 쥐의 수가 2배씩 증가한다. 며칠만에
+# 창고의 쌀이 모두 쥐의 먹이가 될까. 그리고 쥐는 총 몇마리 인가?
+# (쌀 한통 = 1kg, 쌀을 먹은 후 2배 증가하는 조건)
+# 총 10만그람 쌀
+
+# print("1번째", rice - (2 * eat_oneday) * 1)
+# print("9번째", rice - (2 * eat_oneday) * 9)
+# print("10번째", rice - (2 * eat_oneday) * 9 - (4 * eat_oneday) * 1)
+# print("19번째", rice - (2 * eat_oneday) * 9 - (4 * eat_oneday) * 9)
+# print("20번째", rice - (2 * eat_oneday) * 9 - (4 * eat_oneday) * 9 - (8 * eat_oneday) * 1)
+# print()
+# rice = 100000
+# eat_oneday = 20
+# mouse = 2
+# day = 1
+# eat_today = (mouse * eat_oneday)
+# eat_total = 0
+# left_rice = rice - eat_total
+# # while left_rice >= 0:
+
+# #0~9번째날
+# for j in range(0, 10):
+#     eat_total = 2 * eat_oneday * j
+#     print(eat_total)
+
+# # 10~ 11번째날
+# for i in range(1, 11)
+# eat_total = eat_total + 4 * eat_oneday * i
+# left_rice = rice - eat_total
+# print("남은쌀:", left_rice)
+# print()
+
+
+    
+
+#####세번째 시도######
+# 쌀 100통이 저장되어 있는 창고에 암수 1쌍의 쥐가 있다. 쥐 한마리가 하루에
+# 20g씩의 쌀을 먹고, 10일(10,20,30)마다 쥐의 수가 2배씩 증가한다. 며칠만에
+# 창고의 쌀이 모두 쥐의 먹이가 될까. 그리고 쥐는 총 몇마리 인가?
+# (쌀 한통 = 1kg, 쌀을 먹은 후 2배 증가하는 조건)
+# 총 10만그람 쌀
+
+#0~9번째날
+eat = 2 * 20 * 9
+print(eat)
+# 10~ 19번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10
+print(eat)
+# 20~ 29번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10
+print(eat)
+# 30~ 39번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10 + 16 * 20 * 10
+print(eat)
+# 40~ 49번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10 + 16 * 20 * 10 + 32 * 20 * 10
+print(eat)
+# 50~ 59번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10 + 16 * 20 * 10 + 32 * 20 * 10 + 64 * 20 * 10
+print(eat)
+# 60~ 69번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10 + 16 * 20 * 10 + 32 * 20 * 10 + 64 * 20 * 10 + 128 * 20 * 10
+print(eat)
+# 70~ 79번째날
+eat = 2 * 20 * 9 + 4 * 20 * 10 + 8 * 20 * 10 + 16 * 20 * 10 + 32 * 20 * 10 + 64 * 20 * 10 + 128 * 20 * 10 + 256 * 20 * 10
+print(eat)
+# 70~79번째날 사이....이걸 반복문으로 만들어보렴 내일의 나야
