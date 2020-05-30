@@ -47,11 +47,11 @@
 # for i in range(0, 5):
 #     print("상위포문 {} 일때".format(i))
 #선생님이 한거
-# for i in range(5):
-#     print("상위포문 %d 일때 하위포문: " % i, end=" ")
-#     for j in range(5):
-#         print(i * j, end=" ")
-#     print()
+for i in range(5):
+    print("상위포문 %d 일때 하위포문: " % i, end=" ")
+    for j in range(5):
+        print(i * j, end=" ")
+    print()
 
 
 
