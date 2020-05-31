@@ -214,20 +214,66 @@
 # 20g씩의 쌀을 먹고, 10일(10,20,30)마다 쥐의 수가 2배씩 증가한다. 며칠만에
 # 창고의 쌀이 모두 쥐의 먹이가 될까. 그리고 쥐는 총 몇마리 인가?
 # (쌀 한통 = 1kg, 쌀을 먹은 후 2배 증가하는 조건)
-eat_all = - 2 * 20
-day = 0
-mouse = 2
-every_tenday = 1
-flag = True
-while flag:
-    while day < 10 * every_tenday:
-        eat_all = eat_all + mouse * 20 
-        # print("{}번째날 먹은양: {:,}".format(day, eat_all))
-        rice = 100000 - eat_all
-        if rice <= 0:
-            flag = False
-            break
-        day += 1
-    mouse = mouse * 2
-    every_tenday += 1
-print("다 먹는데 걸리는 시간: %d일, 총 쥐 마리수: %d마리" % (day, mouse/2))
+# eat_all = - 2 * 20
+# day = 0
+# mouse = 2
+# every_tenday = 1
+# flag = True
+# while flag:
+#     while day < 10 * every_tenday:
+#         eat_all = eat_all + mouse * 20 
+#         # print("{}번째날 먹은양: {:,}".format(day, eat_all))
+#         rice = 100000 - eat_all
+#         if rice <= 0:
+#             flag = False
+#             break
+#         day += 1
+#     mouse = mouse * 2
+#     every_tenday += 1
+# print("다 먹는데 걸리는 시간: %d일, 총 쥐 마리수: %d마리" % (day, mouse/2))
+# #답은 맞는데 너무 복잡함, 아래가 정답
+# mouse = 2 
+# rice = 100000          # 단위 : 그램(gram) 
+# day = 1 
+# while True: 
+#     rice = rice - (mouse * 20) 
+#     if rice <= 0: 
+#         break 
+#     day = day + 1
+#     if (day % 10) == 0: 
+#         mouse = mouse * 2 
+# print(day, "일", mouse, "마리") 
+
+
+######숙제2
+# print("------------------------")
+# money = int(input("요금을 투입하세요\n>"))
+# while True:
+#     print("------------------------")
+#     print("========커피 자판기========")
+#     print("1. 커피(200)\t2. 코코아(150)\t3. 반환\t4. 종료")
+#     menu = int(input("메뉴를 선택하세요\n>"))
+#     if menu == 1:
+#         if money >= 200:
+#             money = money - 200
+#             print("커피 나왔습니다. 잔돈은 %d원 입니다." % (money))
+#         else:
+#             print("돈이 부족합니다.")
+#             extra_money = int(input("요금을 더투입하세요\n>"))
+#             money = money + extra_money
+#     elif menu == 2:
+#         if money >= 150:
+#             money = money - 150
+#             print("코코아 나왔습니다. 잔돈은 %d원 입니다." % (money))
+#         else:
+#             print("돈이 부족합니다.")
+#             extra_money = int(input("요금을 더투입하세요\n>"))
+#             money = money + extra_money
+#     elif menu == 3:
+#         money = money
+#         print("잔돈을 반환합니다. 잔돈은 %d원 입니다." % money)
+#         break
+#     elif menu == 4:
+#         break
+#     else:
+#         print("메뉴는 1~4 사이의 번호를 입력해야 합니다.")
