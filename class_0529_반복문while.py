@@ -251,10 +251,10 @@
 # mouse = 2
 # day = 0
 # while rice > 0:
-#     if day % 10 == 0:
-#         mouse *= 2
 #     day += 1
 #     rice = rice - mouse * 20
+#     if day % 10 == 0:
+#         mouse *= 2
 # print("쌀 다먹은날: %d일\n총 쥐 마리수: %d마리" % (day, mouse))
 
 
