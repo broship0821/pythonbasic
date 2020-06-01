@@ -231,18 +231,31 @@
 #     mouse = mouse * 2
 #     every_tenday += 1
 # print("다 먹는데 걸리는 시간: %d일, 총 쥐 마리수: %d마리" % (day, mouse/2))
-# #답은 맞는데 너무 복잡함, 아래가 정답
-# mouse = 2 
-# rice = 100000          # 단위 : 그램(gram) 
-# day = 1 
-# while True: 
-#     rice = rice - (mouse * 20) 
-#     if rice <= 0: 
-#         break 
-#     day = day + 1
-#     if (day % 10) == 0: 
-#         mouse = mouse * 2 
-# print(day, "일", mouse, "마리") 
+
+##다른 방법
+# mouse = 2
+# day = 1
+# rice = 100000 # 100 * 1000으로 표시해야 맞음
+# while True:
+#     rice = rice - mouse * 20
+#     if rice <= 0:
+#         break
+#     else:
+#         day += 1
+#         if day % 10 == 0:
+#             mouse = mouse * 2
+# print("모든 쌀을 먹는데 걸리는 시간 %d일, 총 쥐 %d마리" % (day, mouse))
+
+#선생님 방법
+# rice = 100 * 1000
+# mouse = 2
+# day = 0
+# while rice > 0:
+#     if day % 10 == 0:
+#         mouse *= 2
+#     day += 1
+#     rice = rice - mouse * 20
+# print("쌀 다먹은날: %d일\n총 쥐 마리수: %d마리" % (day, mouse))
 
 
 ######숙제2
@@ -251,7 +264,7 @@
 # while True:
 #     print("------------------------")
 #     print("========커피 자판기========")
-#     print("1. 커피(200)\t2. 코코아(150)\t3. 반환\t4. 종료")
+#     print("1. 커피(200)\t2. 코코아(250)\t3. 반환\t4. 종료")
 #     menu = int(input("메뉴를 선택하세요\n>"))
 #     if menu == 1:
 #         if money >= 200:
@@ -263,7 +276,7 @@
 #             money = money + extra_money
 #     elif menu == 2:
 #         if money >= 150:
-#             money = money - 150
+#             money = money - 250
 #             print("코코아 나왔습니다. 잔돈은 %d원 입니다." % (money))
 #         else:
 #             print("돈이 부족합니다.")
@@ -274,6 +287,7 @@
 #         print("잔돈을 반환합니다. 잔돈은 %d원 입니다." % money)
 #         break
 #     elif menu == 4:
+#         print("이용해 주셔서 감사합니다")
 #         break
 #     else:
 #         print("메뉴는 1~4 사이의 번호를 입력해야 합니다.")
