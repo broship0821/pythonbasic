@@ -108,7 +108,6 @@ ls = [10, 5, 20, 7, 9, 31, 12, 11, 19, 32]
 # for i in range(len(ls)):
 #     if i % 2 == 0:
 #         hol.append(ls[i])
-#         # hol += ls[i]
 #     else:
 #         zzak.append(ls[i])
 # for i in range(len(hol)):
@@ -135,5 +134,16 @@ ls = [10, 5, 20, 7, 9, 31, 12, 11, 19, 32]
 # print(invertLs)
 
 # ls의 값을 오름차순으로 sortLs에 저장 후 출력
-
+# print(ls)
+# for j in range(len(ls)-1):
+#     for i in range(j+1, len(ls)):
+#         if ls[j] > ls[i]:
+#             ls[j], ls[i] = ls[i], ls[j]
+#     print(ls)
 # ls의 값을 내림차순으로 reverseLs에 저장 후 출력
+# print(ls)
+# for j in range(len(ls)-1):
+#     for i in range(j+1, len(ls)):
+#         if ls[j] < ls[i]:
+#             ls[j], ls[i] = ls[i], ls[j]
+#     print(ls)
