@@ -88,7 +88,7 @@
 #최종
 # arr = [3, 4, 7, 8, 2, 9, 1, 6, 5]
 # print(arr)
-# for j in range(len(arr)):
+# for j in range(len(arr)-1):
 #     for i in range(j+1, len(arr)):
 #         if arr[j] > arr[i]:
 #             arr[j], arr[i] = arr[i], arr[j]
