@@ -116,7 +116,6 @@ ls = [10, 5, 20, 7, 9, 31, 12, 11, 19, 32]
 
 #ls의 값중 인덱스 홀수번째와 짝수 번째의 합과 차를 구하시오(짝수[0,2,4,8]-홀수[1,3,5,7,9])
 #답: -16
-
 # zzak_sum = 0
 # hol_sum = 0
 # for i in range(len(ls)):
@@ -127,23 +126,37 @@ ls = [10, 5, 20, 7, 9, 31, 12, 11, 19, 32]
 # print(zzak_sum-hol_sum)
 
 # ls의 저장된 값을 invertLs에 거꾸로 저장하시오
+#첫번째방법
 # invertLs = ls
 # for i in range(len(invertLs)//2):
-#     j = len(invertLs)-1-i
+#     j = -1-i
 #     invertLs[j],invertLs[i] = invertLs[i],invertLs[j]
+# print(invertLs)
+#두번째 ls가 삭제됨
+# invertLs = []
+# for i in range(len(ls)):
+#     invertLs.append(ls.pop())
+# print(ls)
+# print(invertLs)
+#세번째
+# invertLs = []
+# for i in range(1,len(ls)+1):
+#     invertLs.append(ls[-i])
 # print(invertLs)
 
 # ls의 값을 오름차순으로 sortLs에 저장 후 출력
-# print(ls)
+# sortLs = ls[:]
+# print(sortLs)
 # for j in range(len(ls)-1):
 #     for i in range(j+1, len(ls)):
-#         if ls[j] > ls[i]:
-#             ls[j], ls[i] = ls[i], ls[j]
-#     print(ls)
+#         if sortLs[j] > sortLs[i]:
+#             sortLs[j], sortLs[i] = sortLs[i], sortLs[j]
+# print(sortLs)
 # ls의 값을 내림차순으로 reverseLs에 저장 후 출력
-# print(ls)
+# reverseLs = ls[:]
+# print(reverseLs)
 # for j in range(len(ls)-1):
 #     for i in range(j+1, len(ls)):
-#         if ls[j] < ls[i]:
-#             ls[j], ls[i] = ls[i], ls[j]
-#     print(ls)
+#         if reverseLs[j] < reverseLs[i]:
+#             reverseLs[j], reverseLs[i] = reverseLs[i], reverseLs[j]
+# print(reverseLs)
