@@ -12,7 +12,7 @@
 #     for j in range(len(aa[i])):
 #         print("[%d][%d]"%(i,j), aa[i][j])
 #다른방법
-# for i in aa:
+# for i in aa: #한꺼풀씩 벗겨낸다고 생각, aa->aa[i]->j 2차원배열->1차원배열->변수
     # for j in i:
     #     print(j)
 
