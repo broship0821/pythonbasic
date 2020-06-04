@@ -57,7 +57,7 @@
 # singer['대표곡'] = input("대표곡 입력:")
 # print(singer)
 # for i in singer.keys(): #딕셔너리를 순서대로 출력하는 방법
-#     print("%s : %s" % (i,singer[i]))
+#     print("%s : %s" % (i,singer[i])) # i는 key가 되고 singer[i]는 value가됨
 
 #1,3번 메뉴가 기능이 똑같음, 둘다 추가, 갱신 가능한 버그
 # menu = {}
@@ -86,6 +86,8 @@
 #     else:
 #         print("잘못 입력, 1~4 입력")
 
+
+### .get(key): value값 찾아줌 
 # num = {1:'일', 2:'이', 3:'삼', 4:'사', 5:'오'}
 # print(num)
 # print("num.get(3):", num.get(3))
@@ -137,7 +139,7 @@
 # print(student['학과'])
 # print()
 # print(student.items())
-# print(list(student.items()))
+# print(list(student.items())) #완벽한 list로 형변환
 # print()
 # print(list(student)) # 이거는 key 값만 반환
 
@@ -177,15 +179,15 @@
 
 ### .fromkeys(ls) ls리스트(튜플)의 있는 값을 받아서 딕셔너리의 키값으로 대입
 ## 리스트
-# dic = {}
+# dic = {4:'사'}
 # ls = []
 # ls.append(input("등록할 키값 입력:"))
 # ls.append(input("등록할 키값 입력:"))
 # ls.append(input("등록할 키값 입력:"))
 # print(ls)
-# dic = dic.fromkeys(ls)
+# dic = dic.fromkeys(ls) # 원래 딕셔너리에 있던 값은 초기화됨
 # print("dic키 설정:", dic)
-# dic = dic.fromkeys(ls,0)
+# dic = dic.fromkeys(ls,0) # value값은 하나만 설정가능, 그 하나로 통일됨
 # print("dic키&값 설정:", dic)
 ## 튜플
 # dic = {}
@@ -204,26 +206,31 @@
 # #print("pop(3) 실행:", num.pop(6)) #없으면 에러
 # print("pop(3) 실행 후:", num)
 
-info = {}
-pe = []
-bl = True
-while bl:
-    # pe.clear() 이런 방식 혹은
-    print("1. 인적사항 등록\n2. 검색\n3. 종료")
-    num = int(input(">>> "))
-    if num == 1:
-        pe.append(input("이름 입력:"))
-        pe.append(input("점수 입력:"))
-        info[pe[0]] = pe[1]
-        # pe = [] 이런 방식으로 계속 초기화를 해줘야됨
-    elif num == 2:
-        name = input("찾고자 하는 학생이름 입력:")
-        if info.get(name) == None:
-            print("해당 학생의 데이터가 존재하지 않습니다")
-        else:
-            print(name, "의 점수:", info.get(name))
-    elif num == 3:
-        print("프로그램 종료")
-        bl = False
-    else:
-        print("1~3사이 숫자 입력")
+# info = {}
+# pe = []
+# bl = True
+# while bl:
+#     # pe.clear() 이런 방식 혹은(go to 220 line)
+#     print("1. 인적사항 등록\n2. 검색\n3. 종료")
+#     num = int(input(">>> "))
+#     if num == 1:
+#         pe.append(input("이름 입력:"))
+#         pe.append(input("점수 입력:"))
+#         info[pe[0]] = pe[1] #이건 몇개의 인적사항을 추가할지 모르니까 반복문 쓸수 없음 [0],[1]로 쓴다음 계속 초기화 시켜줘야됨
+#         # pe = [] 이런 방식으로 계속 초기화를 해줘야됨
+
+#         ## 사실 이 방법이 더 편함
+#         # name = input("이름 입력:")
+#         # score = input("점수 입력:")
+#         # info[name] = score
+#     elif num == 2:
+#         name = input("찾고자 하는 학생이름 입력:")
+#         if info.get(name) == None:
+#             print("해당 학생의 데이터가 존재하지 않습니다")
+#         else:
+#             print(name, "의 점수:", info.get(name))
+#     elif num == 3:
+#         print("프로그램 종료")
+#         bl = False
+#     else:
+#         print("1~3사이 숫자 입력")
