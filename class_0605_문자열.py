@@ -1,12 +1,9 @@
 ## 문자열
 # Str = 'Have a nice day'
-# for i in range(len(Str)):
-#     print("str[%d]:"%i, Str[i])
+# for i in range(len(Str)): # i가 인덱스가 됨
+#     print(Str[i], end="") 
 # print()
-# for i in range(len(Str)): #인덱스 이용하기
-#     print(Str[i], end="")
-# print()
-# for i in Str: #한꺼풀 벗겨내기
+# for i in Str: #한꺼풀 벗겨내기 ,i 자체가 하나의 문자가 됨
 #     print(i, end="")
 # print()
 # print("문자열의 총 길이:", len(Str))
@@ -14,6 +11,7 @@
 
 
 # Str = 'Have a nice day'
+##print(Str[15]) # 인덱스 벗어나면 에러남
 # arr = Str[7:11]
 # print(Str)
 # print(arr)
@@ -94,12 +92,12 @@
 # print("find: 'a'위치:", st.find('a')) #첫번째께 찾아짐
 # print("find: 'a'위치:", st.find('a',2)) # 2번 인덱스 이후부터 찾아줘
 # print("find: 'a'위치:", st.find('a',6)) # 6번 인덱스 이후부터 찾아줘
-# print("find: 'a'위치:", st.find('a',14))
+# print("find: 'a'위치:", st.find('a',20)) # 에러는 안남
 
-# a의 총 개수와 첨자의 위치를 출력 하시오
-st = "Have a nice day Have a nice day Have a nice day"
-# 결과: [1,5,13,17,21,29,33,37,45]
-# while .find()로 -1 이 될때까지
-ls = []
-while 
-print(st.find('a'))
+# # a의 총 개수와 첨자의 위치를 출력 하시오
+# st = "Have a nice day Have a nice day Have a nice day"
+# # 결과: [1,5,13,17,21,29,33,37,45]
+# # while .find()로 -1 이 될때까지
+# ls = []
+# while 
+# print(st.find('a'))

@@ -1,4 +1,4 @@
-# set 집합
+# set 집합 {}
 # list-index/dic-key로 첨자가 있었는데 set은 첨자가 없음 - 중복불가
 # 저장속도는 빠르나 검색은 반복하여 찾아야됨 / 자료 수집에 몰빵
 # 집합은 여러 값들의 모임, 저장순서 보장안되고 중복값을 허용하지않음
@@ -7,21 +7,23 @@
 #print할때마다 순서가 바뀜
 # names = {'허준', '신사임당', '권율', '홍길동', '허준                 ', 212, 'ㅅㅅㅅ'}
 # print(type(names)) #class 'set'
-# print(len(names)) #집합의 개수 (4, 중복제거)
+# print(len(names)) #집합의 개수 (7, 중복제거, 공백만 있어도 다른 문자로 표시)
 # print(names) #중복되어 있는 값은 있어도 오류는 나지 않지만 하나만 표시
 
 # s = {}
 # print(type(s)) #그냥 {}면 dic으로 인지함
-# s = set({}) #set 자료형 초기화
+# s = set({}) #set 자료형 초기화 방법
 # print(type(s))
 # #순서없이 중복제거하여 출력됨
 # print(set('progr               ammmmmming')) #공백도 하나의 문자로 인지
-# print(set('asdfdasf''qwerqwer')) # 이렇게 하나의 문자열이면 가능, ,로 2개로 구분지으면 에러남
+# print(set('asdfdasf''qwerqwer')) # 이렇게 하나의 문자열이면 가능
+# print(set('asdfdasf','qwerqwer')) # ,로 2개로 구분지으면 에러남
 # print(set([12,14,16,25,11,15, 12]))
 # dic = {'a':1, 'b':2, 'c':3}
 # print(set(dic)) # key값만 set으로 가져옴
+# print(set({'a':1, 'b':2, 'c':3}))
 
-# 순서 전혀 없음
+# 순서 전혀 없음 매 출력마다 결과 바뀜
 # for i in {'가','나','다','라'}:
 #     print(i)
 
