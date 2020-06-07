@@ -95,9 +95,20 @@
 # print("find: 'a'위치:", st.find('a',20)) # 에러는 안남
 
 # # a의 총 개수와 첨자의 위치를 출력 하시오
-# st = "Have a nice day Have a nice day Have a nice day"
-# # 결과: [1,5,13,17,21,29,33,37,45]
-# # while .find()로 -1 이 될때까지
-# ls = []
-# while 
-# print(st.find('a'))
+st = "Have a nice day Have a nice day Have a nice day"
+# 결과: [1,5,13,17,21,29,33,37,45]
+# while .find()로 -1 이 될때까지
+Set = set({})
+flag = True
+i = 0
+while flag:
+    num_a = st.find('a', i)
+    if num_a != -1:
+        Set.add(num_a)
+    elif num_a == -1:
+        break
+    i += 1
+ls = list(Set)
+ls.sort()
+print("a 위치:", ls)
+print("a 개수:", len(Set))
