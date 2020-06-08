@@ -1,18 +1,18 @@
 ## 문자열 함수
 
-## .strip('지우고 싶은 문자') 문자열의 양쪽 문자 제거, 미 입력시 공백 제거
+## .strip('지우고 싶은 문자') 문자열의 양쪽부터 문자 제거, 미 입력시 공백 제거
 # st = '      파 이 썬      '
 # print('st\t\t:{}{}{}'.format('*',st,'*'))
 # print('st.strip()\t:{}{}{}'.format('*',st.strip(),'*'))
 # print()
-# st = '    .  파 이 썬        .       ' #제거하는게 연속적이여야됨 양쪽에서 제거해오다가 다른거 있음 중단
+# st = '    !  파 이 썬        !       ' #제거하는게 연속적이여야됨 양쪽에서 제거해오다가 다른거 있음 중단
 # print('st\t\t:{}{}{}'.format('*',st,'*'))
 # print('st.strip()\t:{}{}{}'.format('*',st.strip(),'*'))
 
 # st = '파이썬파파파파파파파'
 # print('st\t\t:', st)
 # print()
-# print('st.strip("파")\t:', st.strip('파'))
+# print('st.strip("파")\t:', st.strip('파')) # 꼭 대칭 아니여도 됨
 # print()
 # st = '파이썬'
 # print('st\t\t:', st)
@@ -46,7 +46,7 @@
 # 오늘 하루도 행복하게
 # 오늘 하루도 최선을
 # """
-# print(st, end="") ## """는 주석처리랑 햇갈릴수 있음
+# print(st, end="") ## """는 주석처리랑 햇갈릴수 있음 쓸때 확실하게 표현하기
 
 # st = """
 # 김개똥 -2017년 03월 24일
@@ -180,17 +180,17 @@
 
 
 
-Str = "python te12st 1234"
-
-print(Str.isdigit()) # 숫자로만 구성인가?
-print(Str[9:11].isdigit()) # 인덱스 사용 가능
-
-print(Str.isalpha()) # 글자로만 구성인가?
-print(Str[:6].isalpha()) # 인덱스 사용 가능
-
-print(Str.isalnum()) # 글자 + 숫자 인가? ## 중간에 공백있어서 False
-print(Str[7:13].isalnum()) # 인덱스 사용 가능
-
-print(Str.islower()) # 소문자로만 구성되어 있나?
-print(Str.isupper()) # 대문자로만 구성되어 있나?
-print(Str.isspace()) # 공백으로만 구성되어 있나?
+# Str = "python te12st 1234"
+# ## .isdigit()
+# print(Str.isdigit()) # 숫자로만 구성인가?
+# print(Str[9:11].isdigit()) # 인덱스 사용 가능
+# ## .isalpha()
+# print(Str.isalpha()) # 글자로만 구성인가?
+# print(Str[:6].isalpha()) # 인덱스 사용 가능
+# ## .isalnum()
+# print(Str.isalnum()) # 글자 + 숫자 인가? ## 중간에 공백있어서 False
+# print(Str[7:13].isalnum()) # 인덱스 사용 가능
+# ## .islower(), .isupper(), .isspace()
+# print(Str.islower()) # 소문자로만 구성되어 있나?
+# print(Str.isupper()) # 대문자로만 구성되어 있나?
+# print(Str.isspace()) # 공백으로만 구성되어 있나?
