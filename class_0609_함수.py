@@ -164,6 +164,26 @@
 #     else:
 #         print("{}은 홀수 입니다".format(num))
 # holjjak()
+## 매개변수 사용
+# def holjjak(num):
+#     if num % 2 == 0:
+#         print("{}은 짝수 입니다".format(num))
+#     else:
+#         print("{}은 홀수 입니다".format(num))
+# num = int(input("숫자 입력:"))
+# holjjak(num)
+## 선생님꺼
+# def jjak_hol(num1):
+#     if num1 % 2 == 0:
+#         return True
+#     else:
+#         return False
+# num1 = int(input("숫자 입력:"))
+# ret = jjak_hol(num1)
+# if ret:
+#     print("{}은 짝수 입니다".format(num1))
+# else:
+#     print("{}은 홀수 입니다".format(num1))
 
 ## 3의 배수를 판별하는 함수를 만드시오
 # def three():
@@ -173,7 +193,13 @@
 #     else:
 #         print("{}은 3의 배수가 아닙니다".format(num))
 # three()
-
+## 선생님꺼
+# def Three_mul(num1):
+#     ret = num1%3
+#     return ret
+# num1 = int(input("숫자 입력:"))
+# if not(Three_mul(num1)): # ret이 3의 배수가 되서 0이되면 not으로 True로바꿔줌, 그때만 실행됨
+#     print("{}은 3의 배수 입니다".format(num1))
 
 ### 계산기
 # def cal_input():
@@ -192,11 +218,28 @@
 # def cal_print(su1,su2,op,result):
 #     print("%d %c %d = %.1f" % (su1, op, su2, result))
 # def calculater():
-#     # ls = [] 하나 이상의 값이 담기면 자동으로 list가 됨
+#     # ls = [] 하나 이상의 값이 담기면 자동으로 list가 됨 # 그런줄 알았는데 튜플로 받음
 #     ls = cal_input()
 #     result = calculate(ls[0],ls[1],ls[2])
 #     cal_print(ls[0],ls[1],ls[2],result)
 # calculater()
+## 선생님 방법
+# def cal_print(su1,su2,op,result):
+#     print("%d %c %d = %.1f" % (su1, op, su2, result))
+# def calculate(su1,su2,op):
+#     if op == "+":
+#         result = su1 + su2
+#     elif op == "-":
+#         result = su1 - su2
+#     elif op == "/":
+#         result = su1 / su2
+#     elif op == "*":
+#         result = su1 * su2
+#     cal_print(su1,su2,op,result)
+# def cal_input():
+#     su1, op, su2 = int(input("숫자:")), input("부호:"), int(input("숫자:"))
+#     calculate(su1,su2,op)
+# cal_input()
 
 
 ## 거꾸로 수를 반환하는 함수를 만드시오
@@ -209,7 +252,7 @@
 #         i += temp
 #         if not result:
 #             break
-#     return(int(i))
+#     return int(i)
 # print("프로그램 시작")
 # reverseCode()
 # print("프로그램 종료")
@@ -222,5 +265,5 @@
 #         i += temp
 #         if not result:
 #             break
-#     return(int(i))
+#     return int(i)
 # print(reverseCode(int(input("숫자 입력:"))))
