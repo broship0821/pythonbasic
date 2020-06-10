@@ -52,6 +52,6 @@
 # import random
 
 # for i in range(10):
-    # print(i," ", random.random())
-    # print(i," ", int(random.random()*10))
-    # print(i, " ", random.randrange(1,11))
+    # print("%d번째:"%(i+1), random.random())
+    # print("%d번째:"%(i+1), int(random.random()*10))
+    # print("%d번째:"%(i+1), random.randrange(1,11))

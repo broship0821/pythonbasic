@@ -105,6 +105,7 @@
 # a,b,c=change(10,20,30) # 언패킹처리
 # d = change(10,20,30)
 # print("a,b,c:",a,b,c)
+# print("a,b,c:",d[0],d[1],d[2])
 # print(a+b+c)
 # print("d:{}, type:{}".format(d,type(d)))
 
@@ -117,7 +118,7 @@
 # print("바꾼 후:",a,b)
 
 
-## lambda 함수: 1회성, 단발성으로 위치 바꿔줌
+## lambda 함수: 1회성, 단발성으로 쓰는 함수, 주로 위치 바꿔줌
 # swap = lambda a,b:[b,a]
 # a = swap(20,10)
 # print("swap 결과:", a) #데이터 위치도 바뀌고 리스트로 바뀜
@@ -134,6 +135,8 @@
 # print(lam(10))
 # print(hap(5,10))
 # noData()
+# 나누기 = lambda a:[a,a*10]
+# print(나누기(3))
 
 # def startGame(): # 게임 시작은 여러번 할 수 있으니 함수로 만들어서 자주 사용
 #     print("Game start!")
