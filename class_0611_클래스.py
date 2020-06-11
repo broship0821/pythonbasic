@@ -90,6 +90,8 @@
 #         print("경험치:", self.exp)
 #         print("체력:", self.hp)
 #         print("===========================")
+
+# from practice import Player
 # if __name__ == "__main__":
 #     class Healer(Player): # 자식 클래스 힐러에다가 부모클래스 Player를 상속
 #         def heal(self):
